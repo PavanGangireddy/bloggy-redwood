@@ -16,10 +16,7 @@ export const handler = createGraphQLHandler({
   sdls,
   services,
   cors: {
-    origin: [
-      'https://melodious-mochi-504539.netlify.app/',
-      'https://main--melodious-mochi-504539.netlify.app/',
-    ],
+    origin: '*',
     credentials: true, // <-- web side domain
   },
   onException: () => {
