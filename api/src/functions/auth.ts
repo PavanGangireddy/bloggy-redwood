@@ -139,6 +139,11 @@ export const handler = async (event, context) => {
       resetTokenExpiresAt: 'resetTokenExpiresAt',
     },
 
+    cors: {
+      origin: '*',
+      credentials: true, // <-- web side domain
+    },
+
     // Specifies attributes on the cookie that dbAuth sets in order to remember
     // who is logged in. See https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies
     cookie: {
