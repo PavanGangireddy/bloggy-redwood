@@ -15,6 +15,9 @@ export const handler = createGraphQLHandler({
   directives,
   sdls,
   services,
+  cors: {
+    origin: 'https://melodious-mochi-504539.netlify.app', // <-- web side domain
+  },
   onException: () => {
     // Disconnect from your database with an unhandled exception.
     db.$disconnect()
